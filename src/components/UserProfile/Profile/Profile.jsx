@@ -1,11 +1,8 @@
 import { ProfileDescription } from '../ProfileDescription/ProfileDescription';
-import css from './Profile.module.css';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
-  const statsKeyAndValues = Object.entries(stats);
-
   return (
-    <div className={css.profile}>
+    <div className="profile">
       <ProfileDescription
         username={username}
         tag={tag}
@@ -13,8 +10,8 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         avatar={avatar}
       />
 
-      <ul className={css.stats}>
-        {statsKeyAndValues.map((key, index) => {
+      <ul className="stats">
+        {Object.entries(stats).map((key, index) => {
           return (
             <li key={index}>
               <span className="label">{key[0]}</span>
