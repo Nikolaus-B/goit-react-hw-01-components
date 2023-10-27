@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const getBGcolor = props => {
+const getBGColor = props => {
   switch (props.$label) {
     case '.docx':
       return props.theme.colors.deepSkyBlue;
@@ -27,7 +27,7 @@ export const StatiscticItem = styled.li`
   justify-content: center;
   width: 100%;
   height: 80px;
-  background-color: ${getBGcolor};
+  background-color: ${getBGColor};
 `;
 
 export const StatisticLabel = styled.span`

@@ -15,6 +15,7 @@ export const ProfileItem = styled.li`
   align-items: center;
   width: 100%;
   height: 70px;
+  border-radius: 2px;
   border: 1px solid ${p => p.theme.colors.ghostWhile};
   background-color: ${p => p.theme.colors.lightSteelBlue};
 `;
