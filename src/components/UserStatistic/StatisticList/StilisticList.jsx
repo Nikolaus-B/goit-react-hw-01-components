@@ -1,14 +1,21 @@
+import {
+  StatysticListContainer,
+  StatiscticItem,
+  StatisticLabel,
+  StatisticPercentage,
+} from './StstisticList.styled';
+
 export const StatisticList = ({ stats }) => {
   return (
-    <ul className="stat-list">
+    <StatysticListContainer>
       {stats.map(({ id, label, percentage }) => {
         return (
-          <li key={id} className="item">
-            <span className="label">{label}</span>
-            <span className="percentage">{percentage}%</span>
-          </li>
+          <StatiscticItem key={id} $label={label}>
+            <StatisticLabel>{label}</StatisticLabel>
+            <StatisticPercentage>{percentage}%</StatisticPercentage>
+          </StatiscticItem>
         );
       })}
-    </ul>
+    </StatysticListContainer>
   );
 };

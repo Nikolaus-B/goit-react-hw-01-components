@@ -4,7 +4,7 @@ import { StatisticSection } from './Statystic.styled';
 
 export const Statistic = ({ title, stats }) => {
   return (
-    <StatisticSection className="statistics">
+    <StatisticSection>
       <StatisticTitle title={title} />
       <StatisticList stats={stats} />
     </StatisticSection>
