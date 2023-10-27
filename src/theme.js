@@ -9,6 +9,10 @@ export const theme = {
     lightSkyBlue: '#87CEFA',
     springGreen: '#00FA9A',
     red: '#FF0000',
+    darkGrey: '#DCDCDC',
+    ghostWhile: '#778899',
+    lightSteelBlue: '#B0C4DE',
+    slightGrey: '#778899',
   },
   radii: {
     sm: '4px',

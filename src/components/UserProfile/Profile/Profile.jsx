@@ -1,8 +1,15 @@
 import { ProfileDescription } from '../ProfileDescription/ProfileDescription';
+import {
+  ProfileContainer,
+  ProfileItem,
+  ProfileList,
+  UserLabel,
+  UserQuantity,
+} from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div className="profile">
+    <ProfileContainer>
       <ProfileDescription
         username={username}
         tag={tag}
@@ -10,16 +17,16 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         avatar={avatar}
       />
 
-      <ul className="stats">
+      <ProfileList className="stats">
         {Object.entries(stats).map((key, index) => {
           return (
-            <li key={index}>
-              <span className="label">{key[0]}</span>
-              <span className="quantity">{key[1]}</span>
-            </li>
+            <ProfileItem key={index}>
+              <UserLabel>{key[0]}</UserLabel>
+              <UserQuantity>{key[1]}</UserQuantity>
+            </ProfileItem>
           );
         })}
-      </ul>
-    </div>
+      </ProfileList>
+    </ProfileContainer>
   );
 };
