@@ -1,5 +1,19 @@
 import styled from 'styled-components';
 
+export const StatisticSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  background-color: ${p => p.theme.colors.white};
+`;
+
+export const StatysticText = styled.h2`
+  margin: 30px 0 30px 0;
+  background-color: ${p => p.theme.colors.white};
+`;
+
 const getBGColor = props => {
   switch (props.$label) {
     case '.docx':

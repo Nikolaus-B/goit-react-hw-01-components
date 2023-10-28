@@ -11,12 +11,6 @@ const getActiveColor = props => {
   }
 };
 
-export const Friends = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-`;
-
 export const FriendItem = styled.li`
   display: flex;
   align-items: center;

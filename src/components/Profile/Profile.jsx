@@ -1,21 +1,30 @@
-import { ProfileDescription } from '../ProfileDescription/ProfileDescription';
 import {
+  Description,
   ProfileContainer,
   ProfileItem,
   ProfileList,
   UserLabel,
   UserQuantity,
+  ProfileImage,
+  UserName,
+  UserTag,
+  UserLocation,
 } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <ProfileContainer>
-      <ProfileDescription
-        username={username}
-        tag={tag}
-        location={location}
-        avatar={avatar}
-      />
+      <Description>
+        <ProfileImage
+          src={avatar}
+          alt="User avatar"
+          width="100px"
+          height="100px"
+        />
+        <UserName>{username}</UserName>
+        <UserTag>{tag}</UserTag>
+        <UserLocation>{location}</UserLocation>
+      </Description>
 
       <ProfileList className="stats">
         {Object.entries(stats).map((key, index) => {
