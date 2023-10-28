@@ -13,6 +13,7 @@ export const theme = {
     ghostWhile: '#778899',
     lightSteelBlue: '#B0C4DE',
     slightGrey: '#778899',
+    skyBlue: '#87CEEB',
   },
   radii: {
     sm: '4px',

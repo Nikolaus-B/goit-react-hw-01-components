@@ -1,13 +1,15 @@
+import { TransactionBills, TransactionLine } from './TransactionBody.styled';
+
 export const TransactionBody = ({ transaction }) => {
   return (
     <tbody>
-      {transaction.map(({ id, type, amount, currency }) => {
+      {transaction.map(({ id, type, amount, currency }, index) => {
         return (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-          </tr>
+          <TransactionLine key={id} $isEven={index % 2 === 0}>
+            <TransactionBills>{type}</TransactionBills>
+            <TransactionBills>{amount}</TransactionBills>
+            <TransactionBills>{currency}</TransactionBills>
+          </TransactionLine>
         );
       })}
     </tbody>
